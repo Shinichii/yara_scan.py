@@ -13,6 +13,7 @@ dirToScanPath = "/home/user/Test" # A remplacer par le dossier desire
 print('Downloading latest yara signatures....')
 urllib.urlretrieve(url, "master.zip")
 os.system("unzip -o -qq master.zip")
+os.system("rm master.zip")
 print('Done')
 print('Loading rules...')
 rules = yara.compile("home/user/rules-master/index.yar")# Choisir l emplacement des regles
